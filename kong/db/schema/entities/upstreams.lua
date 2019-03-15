@@ -217,7 +217,7 @@ local r =  {
     -- if algorithm is "least" then hash_on must be "none"
     { conditional = {
       if_field = "algorithm", if_match = { match = "^least$" },
-      then_field = "hash_on", then_match = { one_of = { "none" }, },
+      then_field = "hash_on", then_match = { eq = "none" },
     }, },
   },
 }
